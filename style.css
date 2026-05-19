@@ -1,0 +1,48 @@
+body {
+    font-family: 'Playfair Display', serif;
+    background-color: #1a1a1a;
+}
+
+.glass-card {
+    background: rgba(245, 241, 235, 0.08); 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+/* --- SPLIT ENVELOPE OPENING ANIMATION --- */
+#env-left {
+    transform: translateX(0);
+}
+#env-right {
+    transform: translateX(0);
+}
+
+.open-left {
+    transform: translateX(-100%) !important;
+}
+.open-right {
+    transform: translateX(100%) !important;
+}
+
+/* Elements Stagger Cascade Logic */
+.hide-for-anim {
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+.fade-in-active {
+    animation: layoutSlideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes layoutSlideUp {
+    0% { opacity: 0; transform: translateY(25px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+/* --- HIDE SCROLLBARS FOR CLEAN LOOK --- */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}

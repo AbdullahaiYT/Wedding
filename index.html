@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bespoke Wedding Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="max-w-md mx-auto shadow-2xl overflow-x-hidden relative font-serif">
+
+    <audio id="bg-music" src="bg.mp3" loop></audio>
+
+    <div class="fixed top-0 left-0 w-full h-full z-[-1] bg-[#B8A89A]">
+        <video autoplay loop muted playsinline class="w-full h-full object-cover opacity-80">
+            <source src="couple.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>
+    </div>
+
+    <div id="envelope-wrapper" class="fixed inset-0 max-w-md mx-auto z-50 overflow-hidden pointer-events-none">
+        <div id="env-left" class="absolute top-0 left-0 w-1/2 h-full transition-transform duration-1000 ease-in-out pointer-events-auto flex flex-col justify-center items-end pr-2" style="background-color: #F5F1EB; border-r: 1px solid #E6D7C3;">
+            <h2 class="text-3xl font-bold translate-x-4" style="color: #D4B483;">Aditi</h2>
+        </div>
+        <div id="env-right" class="absolute top-0 right-0 w-1/2 h-full transition-transform duration-1000 ease-in-out pointer-events-auto flex flex-col justify-center items-start pl-2" style="background-color: #F5F1EB; border-l: 1px solid #E6D7C3;">
+            <h2 class="text-3xl font-bold -translate-x-4" style="color: #D4B483;">& Arjun</h2>
+        </div>
+        <div class="absolute inset-0 flex items-center justify-center pointer-events-none z-50">
+            <div id="open-btn" class="cursor-pointer animate-bounce rounded-full shadow-2xl flex flex-col items-center justify-center w-32 h-32 pointer-events-auto transition-all duration-500" style="background: radial-gradient(circle, #D4B483 0%, #B8A89A 100%); border: 4px solid #FFF8F2;">
+                <span class="text-xs font-bold uppercase tracking-widest text-white drop-shadow-md text-center">Tap to<br>Open</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content" class="relative z-10 p-5 pb-24 text-center text-white min-h-screen flex flex-col justify-center">
+        
+        <div class="animate-me hide-for-anim">
+            <p class="text-xs tracking-[0.3em] uppercase mb-2" style="color: #E6D7C3;">The Wedding Of</p>
+            <h1 class="text-5xl italic font-bold mb-4 drop-shadow-lg" style="color: #D4B483;">Aditi & Arjun</h1>
+            <p class="text-xs font-light tracking-widest border-t border-b py-2 inline-block mx-auto mb-8" style="border-color: #D4B483; color: #FFF8F2;">
+                DECEMBER 2026
+            </p>
+        </div>
+
+        <div class="animate-me hide-for-anim glass-card p-4 rounded-2xl mb-6 shadow-xl border" style="border-color: rgba(212, 180, 131, 0.2);">
+            <div class="flex justify-between gap-4">
+                <div class="w-1/2">
+                    <img src="indbride.jpg" alt="Bride" class="w-full h-32 object-cover object-top rounded-lg border-2 mb-1" style="border-color: #D4B483;">
+                    <p class="text-xs font-bold" style="color: #FFF8F2;">Aditi</p>
+                </div>
+                <div class="w-1/2">
+                    <img src="groom.jpg" alt="Groom" class="w-full h-32 object-cover object-top rounded-lg border-2 mb-1" style="border-color: #D4B483;">
+                    <p class="text-xs font-bold" style="color: #FFF8F2;">Arjun</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="animate-me hide-for-anim glass-card p-4 rounded-2xl mb-4 text-left border" style="border-color: rgba(212, 180, 131, 0.2);">
+            <div class="flex justify-between items-center mb-2">
+                <h4 class="text-lg font-bold" style="color: #E8C77A;">✧ Haldi Ceremony</h4>
+                <span class="text-xs py-1 px-3 rounded-full bg-white/10" style="color: #FFF8F2;">28 Dec 2026</span>
+            </div>
+            <div class="grid grid-cols-4 gap-2 text-center bg-black/30 p-2 rounded-lg text-xs">
+                <div><span id="haldi-days" class="font-bold text-sm block">00</span>Days</div>
+                <div><span id="haldi-hours" class="font-bold text-sm block">00</span>Hrs</div>
+                <div><span id="haldi-mins" class="font-bold text-sm block">00</span>Mins</div>
+                <div><span id="haldi-secs" class="font-bold text-sm block">00</span>Secs</div>
+            </div>
+        </div>
+
+        <div class="animate-me hide-for-anim glass-card p-4 rounded-2xl mb-4 text-left border" style="border-color: rgba(212, 180, 131, 0.2);">
+            <div class="flex justify-between items-center mb-2">
+                <h4 class="text-lg font-bold" style="color: #E8C77A;">✧ Mehndi Night</h4>
+                <span class="text-xs py-1 px-3 rounded-full bg-white/10" style="color: #FFF8F2;">29 Dec 2026</span>
+            </div>
+            <div class="grid grid-cols-4 gap-2 text-center bg-black/30 p-2 rounded-lg text-xs">
+                <div><span id="mehndi-days" class="font-bold text-sm block">00</span>Days</div>
+                <div><span id="mehndi-hours" class="font-bold text-sm block">00</span>Hrs</div>
+                <div><span id="mehndi-mins" class="font-bold text-sm block">00</span>Mins</div>
+                <div><span id="mehndi-secs" class="font-bold text-sm block">00</span>Secs</div>
+            </div>
+        </div>
+
+        <div class="animate-me hide-for-anim rounded-2xl mb-5 p-5 shadow-2xl border-2 relative overflow-hidden" style="background: linear-gradient(135deg, rgba(212,180,131,0.25) 0%, rgba(184,168,154,0.1) 100%); border-color: #D4B483; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);">
+            <div class="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2" style="border-color: #E8C77A;"></div>
+            <div class="absolute top-0 right-0 w-3 h-3 border-t-2 border-r-2" style="border-color: #E8C77A;"></div>
+            
+            <span class="text-[10px] tracking-[0.4em] uppercase block mb-1" style="color: #E8C77A;">The Grand Day</span>
+            <h3 class="text-2xl font-bold italic mb-3" style="color: #FFF8F2;">✧ The Wedding Ceremony ✧</h3>
+            <p class="text-sm mb-4" style="color: #E6D7C3;">30th December 2026 @ Bala ji Temple, Moradabad</p>
+            
+            <div class="flex justify-around bg-white/10 p-3 rounded-xl border border-white/10 shadow-inner mb-4">
+                <div class="text-center"><span id="wedding-days" class="text-3xl font-bold block" style="color: #E8C77A;">00</span><p class="text-[9px] uppercase tracking-wider opacity-70">Days</p></div>
+                <div class="text-center"><span id="wedding-hours" class="text-3xl font-bold block" style="color: #E8C77A;">00</span><p class="text-[9px] uppercase tracking-wider opacity-70">Hours</p></div>
+                <div class="text-center"><span id="wedding-mins" class="text-3xl font-bold block" style="color: #E8C77A;">00</span><p class="text-[9px] uppercase tracking-wider opacity-70">Mins</p></div>
+                <div class="text-center"><span id="wedding-secs" class="text-3xl font-bold block" style="color: #E8C77A;">00</span><p class="text-[9px] uppercase tracking-wider opacity-70">Secs</p></div>
+            </div>
+            
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Bala+ji+Temple+Moradabad" target="_blank" class="text-xs font-bold px-8 py-2.5 rounded-full uppercase tracking-wider text-[#4a0410] inline-block shadow-md hover:scale-105 transition-transform" style="background-color: #D4B483;">Get Directions</a>
+        </div>
+
+        <div class="animate-me hide-for-anim glass-card p-4 rounded-2xl mb-6 text-left border" style="border-color: rgba(212, 180, 131, 0.2);">
+            <div class="flex justify-between items-center mb-2">
+                <h4 class="text-lg font-bold" style="color: #E8C77A;">✧ Grand Reception</h4>
+                <span class="text-xs py-1 px-3 rounded-full bg-white/10" style="color: #FFF8F2;">31 Dec 2026</span>
+            </div>
+            <div class="grid grid-cols-4 gap-2 text-center bg-black/30 p-2 rounded-lg text-xs">
+                <div><span id="reception-days" class="font-bold text-sm block">00</span>Days</div>
+                <div><span id="reception-hours" class="font-bold text-sm block">00</span>Hrs</div>
+                <div><span id="reception-mins" class="font-bold text-sm block">00</span>Mins</div>
+                <div><span id="reception-secs" class="font-bold text-sm block">00</span>Secs</div>
+            </div>
+        </div>
+
+        <div class="animate-me hide-for-anim glass-card p-4 rounded-2xl mb-6 shadow-xl border" style="border-color: rgba(212, 180, 131, 0.2);">
+            <h3 class="text-xl italic mb-1" style="color: #E8C77A;">✧ Cherished Memories ✧</h3>
+            <p class="text-[10px] uppercase tracking-widest mb-4" style="color: #E6D7C3;">Swipe to view</p>
+            
+            <div class="flex gap-3 overflow-x-auto pb-2 snap-x hide-scrollbar">
+                <img src="couple.jpg" class="w-48 h-48 object-cover object-top rounded-lg shrink-0 snap-center border-2" style="border-color: #D4B483;">
+                <img src="romantic.jpg" class="w-48 h-48 object-cover object-top rounded-lg shrink-0 snap-center border-2" style="border-color: #D4B483;">
+                <img src="wedding.jpg" class="w-48 h-48 object-cover object-top rounded-lg shrink-0 snap-center border-2" style="border-color: #D4B483;">
+                <img src="indbride.jpg" class="w-48 h-48 object-cover object-top rounded-lg shrink-0 snap-center border-2" style="border-color: #D4B483;">
+                <img src="groom.jpg" class="w-48 h-48 object-cover object-top rounded-lg shrink-0 snap-center border-2" style="border-color: #D4B483;">
+            </div>
+        </div>
+
+        <div class="animate-me hide-for-anim glass-card p-5 rounded-2xl mb-6 shadow-xl border" style="border-color: rgba(212, 180, 131, 0.2);">
+            <h3 class="text-xl italic mb-1" style="color: #E8C77A;">✧ Shower Your Blessings ✧</h3>
+            <p class="text-[10px] uppercase tracking-widest mb-4" style="color: #E6D7C3;">Love from family & friends</p>
+
+            <div class="max-h-48 overflow-y-auto space-y-3 pr-2 text-left hide-scrollbar mb-4">
+                
+                <div class="bg-black/20 p-3 rounded-lg border border-white/5 relative">
+                    <p class="text-sm italic mb-2 leading-relaxed" style="color: #FFF8F2;">"Wishing you both a lifetime of love and happiness. May your journey be as beautiful as this day!"</p>
+                    <p class="text-xs font-bold text-right" style="color: #D4B483;">- Rahul & Neha</p>
+                </div>
+                
+                <div class="bg-black/20 p-3 rounded-lg border border-white/5 relative">
+                    <p class="text-sm italic mb-2 leading-relaxed" style="color: #FFF8F2;">"Congratulations Aditi and Arjun! Can't wait to celebrate the big day with you all."</p>
+                    <p class="text-xs font-bold text-right" style="color: #D4B483;">- Uncle Sharma</p>
+                </div>
+                
+                <div class="bg-black/20 p-3 rounded-lg border border-white/5 relative">
+                    <p class="text-sm italic mb-2 leading-relaxed" style="color: #FFF8F2;">"Dher saara pyar aur aashirwad. Always stay happy together."</p>
+                    <p class="text-xs font-bold text-right" style="color: #D4B483;">- Dadi Maa</p>
+                </div>
+            </div>
+
+            <a href="https://wa.me/910000000000?text=Hi%20Aditi%20%26%20Arjun,%20Congratulations!%20My%20blessings%20are%20with%20you." target="_blank" class="text-xs font-bold px-6 py-3 rounded-full uppercase tracking-wider text-[#4a0410] inline-block shadow-md w-full transition-transform hover:scale-105" style="background-color: #D4B483;">
+                Add Your Blessing
+            </a>
+        </div>
+
+        <div class="animate-me hide-for-anim border-t mt-8 pt-6 pb-4" style="border-color: rgba(212, 180, 131, 0.3);">
+            <h4 class="text-sm tracking-widest uppercase mb-2" style="color: #D4B483;">Design By NextGen Studio</h4>
+            <p class="text-[11px] italic px-4 mb-4 leading-relaxed" style="color: #E6D7C3;">
+                "Want a stunning, interactive premium digital invitation that leaves a lasting impression? Aisi hi bespoke web experiences and automation build karwane ke liye humse connect karein."
+            </p>
+            <p class="text-xs font-bold mb-4" style="color: #E8C77A;">For Custom Orders & Enquiries:</p>
+            
+            <div class="flex justify-center gap-4 text-xs">
+                <a href="https://instagram.com/nextgenstudioup" target="_blank" class="px-4 py-2 rounded-md border transition-colors flex items-center gap-1" style="border-color: #D4B483; color: #FFF8F2; background: rgba(212,180,131,0.1);">
+                    📸 Instagram
+                </a>
+                <a href="mailto:nextgenstudiohelp.business@gmail.com" class="px-4 py-2 rounded-md border transition-colors flex items-center gap-1" style="border-color: #D4B483; color: #FFF8F2; background: rgba(212,180,131,0.1);">
+                    ✉️ Email Us
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto p-3 flex justify-between items-center px-6 z-40 border-t" style="background-color: #F5F1EB; border-color: #E6D7C3;">
+        <span class="text-xs font-bold tracking-widest uppercase" style="color: #B8A89A;">Wedding Vows</span>
+        <button id="music-toggle" class="text-xs font-bold px-4 py-2 rounded-full shadow-md text-white" style="background-color: #D4B483;">
+            PAUSE
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
